@@ -21,7 +21,7 @@ body{
 }
 
 .container-principal h1{
-    
+   width: 100%; 
 }
 
 /* Corpo do index */
@@ -33,17 +33,24 @@ body{
     justify-content: center;
 }
 
-.corpo h2{
-    width: 10%;
-}
-
 .corpo img{
     overflow:.hidden;
     width: 20em;
     align-self: center;
+    margin-right: 3em;
+    border: 3px solid #8090A6;
 }
 
-.corpo p{
-    width: 2em;
+
+/* Corpo Interno */
+
+.corpo-interno h2{
+    width: 100%;
+}
+
+.corpo-interno p{
+    width: 20em;
+    margin-top: 3em;
+    margin-bottom: 4.7em;
 }
 

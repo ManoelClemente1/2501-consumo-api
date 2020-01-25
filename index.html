@@ -7,11 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chuck Norris Jokes</title>
-    
     <link rel="stylesheet" href="css/index.css">
+    
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+        </script>
+ 
   </head>
   
   <body>
+   <div w3-include-html="header.html"></div>
+   
     <main>
         <div class="container-principal">
            
@@ -23,7 +55,7 @@
                 <figure id="imagem-aleatoria"><img src="img/1.jpg"></figure>
                 <div class="corpo-interno">
                    <h2>Jokes Here</h2>
-                    <p id="mensagens-aleatorias">Exemplo de texto, lorem blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+                    <p id="mensagens-aleatorias">Clique no botão para mudar a piada e a imagem!</p>
                     <button id="botao-principal">Botão Principal</button> 
                 </div>
             </div>
@@ -33,6 +65,12 @@
             
         </div>
     </main>
+    
+    <div w3-include-html="footer.html"></div>
+    
+    <script>
+        includeHTML();
+    </script>
   </body>
   
 </html>
