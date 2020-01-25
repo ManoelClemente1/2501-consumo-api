@@ -9,6 +9,7 @@
     <title>Chuck Norris Jokes</title>
    
     <link rel="stylesheet" href="css/index.css">
+    
   </head>
   
   <body>
@@ -17,18 +18,18 @@
               <h1>Exemplo de Título</h1>
           </div>
            <div class="corpo">
-                <figure>
-                    <img src="" alt="Imagem do Chuck Norris">
-                    <figcaption></figcaption>
+                <figure id="imagem_aleatoria">
+                    
                 </figure>
                 <h2>Jokes Here</h2>
                 <p id="mensagens-aleatorias"></p>
-                <button id="botao-principal">Botão Principal</button>
+                <button id="botao-principal" onclick="chamaApi()">Botão Principal</button>
             </div>
             <div id="lista"></div>
         <div class="imagem-chuck"></div>
             
        </div>
+       <script src="js/index.js"></script>
   </body>
   
 </html>

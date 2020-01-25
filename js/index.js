@@ -10,10 +10,7 @@ fetch('https://api.chucknorris.io/jokes/random')
     .then(dados => {
         console.log(dados);
         
-        document.getElementById('show').innerHTML = `<p>${dados.value}</p>`;
-        localStorage.push("joke",  JSON.stringify (dados.value));
-        
-        document.getElementById('lastJoke').innerHTML = `<p>${JSON.parse(localStorage.getItem("joke"))}</p>` ;
+        document.getElementById('mensagens-aleatorias').innerHTML = `<p>${dados.value}</p>`;
 
         if (imgClick === 7) imgClick = -1;
         imgClick ++;
@@ -22,7 +19,7 @@ fetch('https://api.chucknorris.io/jokes/random')
         document.getElementById('imagem_aleatoria').innerHTML = `<img src="img/${img}" alt="Imagem do Chuck Norris">`;
         
         
-    })    
+    })  
     .catch(err => console.err(err));
 
    
