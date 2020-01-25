@@ -14,9 +14,17 @@ fetch('https://api.chucknorris.io/jokes/random')
     .then(dados => {
         console.log(dados);
         
-        document.getElementById('show').innerHTML += '<div>{dados.icon_url}</div>';
+        document.getElementById('show').innerHTML = `<p>${dados.value}</p>`;
+        localStorage.push("joke",  JSON.stringify (dados.value));
+        
+        document.getElementById('lastJoke').innerHTML = `<p>${JSON.parse(localStorage.getItem("joke"))}</p>` ;
+
+        
+        
     })    
     .catch(err => console.err(err));
 
    
 }
+
+
