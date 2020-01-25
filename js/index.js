@@ -1,4 +1,7 @@
 fetch('https://api.chucknorris.io/jokes/random')
-    .then();
-    .then();
-    .catch(alert('Erro no processamento'));
+    .then(response => response.json())
+    .then(dados => {
+        console.log(dados)
+    })    
+    .catch(err => console.err(err));
+
