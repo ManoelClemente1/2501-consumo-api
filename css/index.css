@@ -4,12 +4,28 @@ body{
     font-size: 16px;
     font-family: "arial";
     text-align: center;
+    width: 100vw;
 }
 
-container-principal{
-    width: 80vw;
+.container-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.corpo{
+    width: 10vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
+.corpo img{
+    width: 40%;
+}
+
+.corpo p{
+    width: 20em;
+}
+
