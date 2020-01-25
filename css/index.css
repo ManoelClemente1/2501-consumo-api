@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: "arial";
+    text-align: center;
+}
+
+container-principal{
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
