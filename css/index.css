@@ -11,18 +11,28 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 80%;
+    margin:auto;
 }
 
+
+
+
 .corpo{
-    width: 10vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+.corpo h1{
+    width: 100vw;
+}
+
 .corpo img{
-    width: 40%;
+    overflow:.hidden;
+    width: 20em;
+    align-self: center;
 }
 
 .corpo p{
