@@ -1,15 +1,56 @@
+/* Básico */
+
 body{
     background-color: black;
     color: white;
     font-size: 16px;
     font-family: "arial";
     text-align: center;
+    width: 100vw;
 }
 
-container-principal{
-    width: 80vw;
+
+/* Container Principal */
+
+.container-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin:auto;
+}
+
+.container-principal h1{
+   width: 100%; 
+}
+
+/* Corpo do index */
+
+.corpo{
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
+.corpo img{
+    overflow:hidden;
+    width: 20em;
+    align-self: center;
+    margin-right: 3em;
+    border: 3px solid #8090A6;
+}
+
+
+/* Corpo Interno */
+
+.corpo-interno h2{
+    width: 100%;
+}
+
+.corpo-interno p{
+    width: 20em;
+    margin-top: 3em;
+    margin-bottom: 4.7em;
+}
+

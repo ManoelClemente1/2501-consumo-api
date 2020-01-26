@@ -10,13 +10,14 @@ fetch('https://api.chucknorris.io/jokes/random')
     .then(dados => {
         console.log(dados);
         
+
         document.getElementById('mensagens-aleatorias').innerHTML = `<p>${dados.value}</p>`;
 
         if (imgClick === 7) imgClick = -1;
         imgClick ++;
         const img = ChuckImg[imgClick];
         console.log("img", img)
-        document.getElementById('imagem_aleatoria').innerHTML = `<img src="img/${img}" alt="Imagem do Chuck Norris">`;
+        document.getElementById('imagem-aleatoria').innerHTML = `<img src="img/${img}" alt="Imagem do Chuck Norris">`;
         
         
     })  
